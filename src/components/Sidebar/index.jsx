@@ -15,7 +15,7 @@ const Sidebar = () => {
       </Header>
       <Wrapper>
         {sidebar.map(({ title, Icon }) => (
-          <div>{title} </div>
+          <>{title} </>
         ))}
       </Wrapper>
     </Container>
