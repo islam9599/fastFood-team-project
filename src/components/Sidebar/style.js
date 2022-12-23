@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
+import { NavLink as Link } from "react-router-dom";
 
 export const Container = styled.div`
   display: flex;
@@ -41,7 +41,8 @@ Wrapper.Desc = styled.div`
   mix-blend-mode: normal;
   opacity: 0.5;
 `;
-export const SidebarItem = styled.div`
+
+export const Items = styled(Link)`
   text-decoration: none;
   font-family: "SFProDisplay";
   font-size: 15px;

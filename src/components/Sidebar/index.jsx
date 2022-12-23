@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, Header, Wrapper, Link, SidebarItem } from "./style";
+import { NavLink as Link } from "react-router-dom";
+import { Container, Header, Items, Wrapper } from "./style";
 import logo from "../../assets/imgs/logo.png";
 import { sidebar } from "../../utils/sidebar";
 
@@ -13,11 +14,11 @@ const Sidebar = () => {
           <Wrapper.Desc>Online mahsulot sotuvi </Wrapper.Desc>
         </Wrapper>
       </Header>
-      <Wrapper>
-        {sidebar.map(({ title, Icon }) => (
-          <>{title} </>
+      <>
+        {sidebar.map(({ title, Icon, path }) => (
+          <Items to={path}>{title}</Items>
         ))}
-      </Wrapper>
+      </>
     </Container>
   );
 };
