@@ -1,6 +1,6 @@
 import React from "react";
-import { NavLink as Link } from "react-router-dom";
-import { Container, Header, Items, Wrapper } from "./style";
+import { Link } from "react-router-dom";
+import { Container, Header, Items, Wrapper, H1 } from "./style";
 import logo from "../../assets/imgs/logo.png";
 import { sidebar } from "../../utils/sidebar";
 
@@ -14,11 +14,11 @@ const Sidebar = () => {
           <Wrapper.Desc>Online mahsulot sotuvi </Wrapper.Desc>
         </Wrapper>
       </Header>
-      <>
+      <Wrapper>
         {sidebar.map(({ title, Icon, path }) => (
-          <Items to={path}>{title}</Items>
+          <Link to={path}>{title}</Link>
         ))}
-      </>
+      </Wrapper>
     </Container>
   );
 };

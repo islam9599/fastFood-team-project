@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { NavLink as Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const Container = styled.div`
   display: flex;
@@ -42,7 +42,14 @@ Wrapper.Desc = styled.div`
   opacity: 0.5;
 `;
 
-export const Items = styled(Link)`
+export const Link = styled(NavLink)`
+  text-decoration: none;
+  font-family: "SFProDisplay";
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff;
+`;
+export const H1 = styled.div`
   text-decoration: none;
   font-family: "SFProDisplay";
   font-size: 15px;
